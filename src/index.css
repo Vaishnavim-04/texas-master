@@ -1,92 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Premium Plumbing Website Design System
+   Color Philosophy: Deep navy trust + vibrant orange energy + clean modern feel */
+
 @layer base {
   :root {
-    /* Elegant dark restaurant palette */
-    --background: 30 8% 8%;
-    --foreground: 40 20% 92%;
+    /* Premium navy-blue base with warm orange accent */
+    --background: 210 25% 97%;
+    --foreground: 220 30% 15%;
 
-    --card: 30 10% 12%;
-    --card-foreground: 40 20% 92%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 15%;
 
-    --popover: 30 10% 10%;
-    --popover-foreground: 40 20% 92%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 15%;
 
-    /* Warm gold accent */
-    --primary: 43 74% 49%;
-    --primary-foreground: 30 8% 8%;
+    /* Deep professional blue - trust & reliability */
+    --primary: 215 85% 35%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Muted sage */
-    --secondary: 150 15% 25%;
-    --secondary-foreground: 40 20% 92%;
+    /* Rich navy for contrast sections */
+    --secondary: 220 45% 12%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 30 8% 18%;
-    --muted-foreground: 40 10% 60%;
+    --muted: 210 20% 93%;
+    --muted-foreground: 220 15% 45%;
 
-    /* Warm copper accent */
-    --accent: 25 60% 45%;
-    --accent-foreground: 40 20% 92%;
+    /* Vibrant orange accent - energy & action */
+    --accent: 28 95% 52%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 40 20% 92%;
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 85% 97%;
 
-    --border: 30 10% 20%;
-    --input: 30 10% 18%;
-    --ring: 43 74% 49%;
+    --border: 214 25% 88%;
+    --input: 214 25% 88%;
+    --ring: 215 85% 35%;
 
-    --radius: 0.25rem;
+    --radius: 0.75rem;
 
-    /* Custom tokens */
-    --cream: 40 33% 94%;
-    --gold: 43 74% 49%;
-    --gold-light: 43 74% 65%;
-    --gold-dark: 43 60% 35%;
-    --charcoal: 30 8% 8%;
-    --charcoal-light: 30 10% 15%;
-    --sage: 150 20% 35%;
-    --sage-light: 150 15% 45%;
-    --wine: 350 45% 30%;
+    /* Success color */
+    --success: 152 70% 40%;
+    --success-foreground: 0 0% 100%;
 
-    --sidebar-background: 30 8% 8%;
-    --sidebar-foreground: 40 20% 92%;
-    --sidebar-primary: 43 74% 49%;
-    --sidebar-primary-foreground: 30 8% 8%;
-    --sidebar-accent: 30 10% 15%;
-    --sidebar-accent-foreground: 40 20% 92%;
-    --sidebar-border: 30 10% 20%;
-    --sidebar-ring: 43 74% 49%;
+    --sidebar-background: 220 45% 12%;
+    --sidebar-foreground: 210 20% 98%;
+    --sidebar-primary: 215 85% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 28 95% 52%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 45% 20%;
+    --sidebar-ring: 215 85% 45%;
+
+    --chart-1: 215 85% 35%;
+    --chart-2: 28 95% 52%;
+    --chart-3: 152 70% 40%;
+    --chart-4: 220 45% 12%;
+    --chart-5: 210 20% 93%;
+
+    --sidebar: 220 45% 12%;
+
+    --font-sans: 'Poppins', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+    --font-serif: 'Merriweather', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+    --shadow-2xs: 0 1px 2px 0px hsl(220 30% 15% / 0.03);
+    --shadow-xs: 0 1px 3px 0px hsl(220 30% 15% / 0.04);
+    --shadow-sm: 0 2px 4px -1px hsl(220 30% 15% / 0.06), 0 1px 2px -1px hsl(220 30% 15% / 0.04);
+    --shadow: 0 4px 6px -1px hsl(220 30% 15% / 0.07), 0 2px 4px -2px hsl(220 30% 15% / 0.04);
+    --shadow-md: 0 6px 12px -2px hsl(220 30% 15% / 0.08), 0 3px 6px -3px hsl(220 30% 15% / 0.05);
+    --shadow-lg: 0 12px 24px -4px hsl(220 30% 15% / 0.1), 0 6px 12px -6px hsl(220 30% 15% / 0.06);
+    --shadow-xl: 0 24px 48px -8px hsl(220 30% 15% / 0.12), 0 12px 24px -12px hsl(220 30% 15% / 0.08);
+    --shadow-2xl: 0 32px 64px -16px hsl(220 30% 15% / 0.18);
+
+    --tracking-normal: 0em;
+    --spacing: 0.25rem;
   }
 
   .dark {
-    --background: 30 8% 8%;
-    --foreground: 40 20% 92%;
-    --card: 30 10% 12%;
-    --card-foreground: 40 20% 92%;
-    --popover: 30 10% 10%;
-    --popover-foreground: 40 20% 92%;
-    --primary: 43 74% 49%;
-    --primary-foreground: 30 8% 8%;
-    --secondary: 150 15% 25%;
-    --secondary-foreground: 40 20% 92%;
-    --muted: 30 8% 18%;
-    --muted-foreground: 40 10% 60%;
-    --accent: 25 60% 45%;
-    --accent-foreground: 40 20% 92%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 40 20% 92%;
-    --border: 30 10% 20%;
-    --input: 30 10% 18%;
-    --ring: 43 74% 49%;
-    --sidebar-background: 30 8% 8%;
-    --sidebar-foreground: 40 20% 92%;
-    --sidebar-primary: 43 74% 49%;
-    --sidebar-primary-foreground: 30 8% 8%;
-    --sidebar-accent: 30 10% 15%;
-    --sidebar-accent-foreground: 40 20% 92%;
-    --sidebar-border: 30 10% 20%;
-    --sidebar-ring: 43 74% 49%;
+    --background: 220 30% 8%;
+    --foreground: 210 20% 98%;
+
+    --card: 220 30% 12%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 220 30% 12%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 215 85% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 20% 95%;
+    --secondary-foreground: 220 30% 10%;
+
+    --muted: 220 30% 18%;
+    --muted-foreground: 210 20% 65%;
+
+    --accent: 28 95% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 85% 97%;
+
+    --border: 220 30% 22%;
+    --input: 220 30% 22%;
+    --ring: 215 85% 50%;
+
+    --sidebar-background: 220 30% 8%;
+    --sidebar-foreground: 210 20% 98%;
+    --sidebar-primary: 215 85% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 28 95% 55%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 30% 18%;
+    --sidebar-ring: 215 85% 50%;
+
+    --chart-1: 215 85% 50%;
+    --chart-2: 28 95% 55%;
+    --chart-3: 152 70% 50%;
+    --chart-4: 210 20% 65%;
+    --chart-5: 220 30% 22%;
+
+    --sidebar: 220 30% 12%;
   }
 }
 
@@ -95,30 +135,14 @@
     @apply border-border;
   }
 
-  html {
-    scroll-behavior: smooth;
-  }
-
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Cormorant Garamond', serif;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
   }
 }
 
+/* Smooth transitions for interactive elements */
 @layer utilities {
-  .text-gradient-gold {
-    @apply bg-gradient-to-r from-[hsl(var(--gold-dark))] via-[hsl(var(--gold))] to-[hsl(var(--gold-light))] bg-clip-text text-transparent;
-  }
-
-  .bg-gradient-dark {
-    @apply bg-gradient-to-b from-[hsl(var(--charcoal))] to-[hsl(var(--charcoal-light))];
-  }
-
-  .line-gold {
-    @apply h-px bg-gradient-to-r from-transparent via-[hsl(var(--gold))] to-transparent;
+  .transition-smooth {
+    @apply transition-all duration-300 ease-out;
   }
 }
